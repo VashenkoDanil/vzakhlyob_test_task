@@ -4,10 +4,6 @@ from django.db import models
 from apps.account.models import User
 
 
-def stories_user_directory_path(instance, filename):
-    return f'stories/user_{instance.user.id}/{filename}'
-
-
 class Story(models.Model):
     title = models.CharField(max_length=256, verbose_name='Заголовок')
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор')
