@@ -9,10 +9,10 @@ class PixabaySearchImages:
     """ Pixabay API documentation https://pixabay.com/api/docs/"""
     url: str = field(init=False)
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self.url = settings.PIXABAY_URL
 
-    def __call__(self, *args, **kwargs):
+    def __call__(self, *args, **kwargs) -> dict:
         params = {
             'key': settings.PIXABAY_KEY,
             **kwargs
