@@ -12,7 +12,7 @@ class EpisodeSerializer(serializers.ModelSerializer):
 class EpisodeCreateUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Episode
-        fields = ['id', 'story', 'episode_number', 'text']
+        fields = '__all__'
 
 
 class StorySerializer(serializers.ModelSerializer):
